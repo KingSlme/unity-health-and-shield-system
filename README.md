@@ -4,7 +4,12 @@ A modular health and shield system for Unity.
 ## Key Features
 - Use of event callbacks for loose coupling 
 - Health bar prefabs already set up for both UI and World Space
-- Option to hide health bars until damaged
+- Option to hide health/shield bars until damaged
+
+## Setup
+- Add the HealthSystem or HealthAndShieldSystem script to a GameObject
+- Add the desired UI prefab to a canvas or World prefab to a GameObject and set its system reference in the inspector
+- Subscribe methods to the desired events
 
 ## Health Events
 - OnHealthMaxChanged
@@ -127,3 +132,6 @@ public void SetShieldCurrent(float newShield)
 ```cs
 public bool IsShieldBroken()
 ```
+
+## Dependencies
+- None
