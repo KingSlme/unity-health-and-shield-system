@@ -4,7 +4,7 @@ using System;
 public class HealthSystem : MonoBehaviour
 {   
     [SerializeField] private float _healthMax = 100.0f;
-    [SerializeField] private float _healthStarting;
+    [SerializeField] [Tooltip("Defaults to _healthMax")] private float _healthStarting;
     private float _healthCurrent;
 
     public event EventHandler OnHealthMaxChanged;
@@ -15,7 +15,9 @@ public class HealthSystem : MonoBehaviour
 
     private void Awake()
     {
-        if (_healthStarting != 0.0f)
+        if (_healthStarting > 0.0f)
+            _healthCurrent = _healthStarting;
+        else
             _healthCurrent = _healthMax;
     }
 
@@ -25,6 +27,11 @@ public class HealthSystem : MonoBehaviour
 
     public void Damage(float amount)
     {
+        if (amount <= 0.0f)
+        {
+            Debug.LogError("Damage must be a positive float!");
+            return;
+        }
         _healthCurrent -= amount;
         if (_healthCurrent < 0.0f)
             _healthCurrent = 0.0f;
