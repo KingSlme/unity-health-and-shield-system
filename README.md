@@ -8,7 +8,7 @@ A modular health and shield system for Unity.
 
 ## Setup
 - Add the HealthSystem or HealthAndShieldSystem script to a GameObject
-- Add the desired UI prefab to a canvas or World prefab to a GameObject and set its system reference in the inspector
+- Add the desired UI prefab to a Canvas or World prefab to a GameObject and set its system reference in the inspector
 - Subscribe methods to the desired events
 
 ## Health Events
