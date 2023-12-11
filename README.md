@@ -7,9 +7,9 @@ A modular health and shield system for Unity.
 - Option to hide health/shield bars until damaged
 
 ## Setup
-- Add the HealthSystem or HealthAndShieldSystem script to a GameObject
-- Add the desired UI prefab to a Canvas or World prefab to a GameObject and set its system reference in the inspector
-- Subscribe methods to the desired events
+1. Add the HealthSystem or HealthAndShieldSystem script to a GameObject
+2. Add the desired UI prefab to a Canvas or World prefab to a GameObject and set its system reference in the inspector
+3. Subscribe methods to the desired events
 
 ## Health Events
 - OnHealthMaxChanged
