@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LookAtCamera : MonoBehaviour
 {   
-    [SerializeField] private bool _invert;
+    [SerializeField] private bool _invert = true;
     private Transform _mainCamera;
 
     private void Awake()
